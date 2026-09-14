@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOHIL Hair Studio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===================== INTRO VIDEO SCREEN ===================== -->
+    <div id="intro-screen">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="soohil.mp4" type="video/mp4">
+        </video>
+        <button id="skip-btn" onclick="skipIntro()">Skip <i class="fa-solid fa-forward"></i></button>
+    </div>
+
+
+    <!-- ===================== NAVBAR ===================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#" class="logo">
+
+                <i class="fa-solid fa-scissors"></i>
+
+                <div>
+
+                    <h2>SOHIL</h2>
+
+                    <span>HAIR CUTTING</span>
+
+                </div>
+
+            </a>
+
+            <ul class="nav-links">
+
+
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#gallery">Gallery</a></li>
+
+
+                <li><a href="#pricing">Pricing</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <a href="#" class="book-btn">
+
+                Book Now
+
+            </a>
+
+        </nav>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <!-- Lenis Smooth Scroll -->
+
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+        <!-- Vanilla Tilt -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    </header>
+    <div class="cursor-glow"></div>
+    <!-- ===================== HERO ===================== -->
+
+    <section class="hero">
+
+        <!-- Background Video -->
+
+        <video class="hero-video" autoplay muted loop playsinline>
+
+            <source src="op.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-container">
+
+            <!-- LEFT -->
+
+            <div class="hero-left">
+
+                <p class="welcome">
+
+                    WELCOME TO
+
+                </p>
+
+                <h1>
+
+                    SOHIL
+
+                    <span>HAIR CUTTING</span>
+
+                </h1>
+
+                <h3>
+
+                    Style • Confidence • Perfection
+
+                </h3>
+
+                <p class="hero-text">
+
+                    Discover premium haircuts, beard styling and luxury grooming experience.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="btn-primary">
+
+                        Book Appointment
+
+                    </a>
+
+                    <a href="#" class="btn-secondary">
+
+                        Our Services
+
+                    </a>
+
+                </div>
+
+            </div>
+            <!-- SERVICE-->
+
+
+
+
+            <!-- RIGHT -->
+
+            <div class="hero-right">
+
+                <div class="hero-image">
+
+                    <img src="SOHIL.png" alt="Sohil Barber">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Social -->
+
+        <div class="social">
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+
+        <!-- Scroll -->
+
+        <div class="scroll-down">
+
+            <span></span>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-container">
+
+            <!-- LEFT IMAGE -->
+            <div class="about-image">
+
+                <img src="SOHIL.png" alt="Sohil Hair Studio">
+
+            </div>
+
+
+            <!-- RIGHT CONTENT -->
+            <div class="about-content">
+
+                <p class="about-tag">
+                    ABOUT SOHIL HAIR STUDIO
+                </p>
+
+                <h2>
+                    More Than Just
+                    <span>A Haircut.</span>
+                </h2>
+
+                <p class="about-description">
+                    Welcome to Sohil Hair Studio — your destination for
+                    premium haircuts, beard styling and complete grooming.
+                </p>
+
+                <p class="about-description">
+                    We combine modern hairstyles with professional
+                    techniques to give every client a clean, confident
+                    and stylish look.
+                </p>
+
+
+                <!-- FEATURES -->
+
+                <div class="about-features">
+
+                    <div class="about-feature">
+                        <i class="fa-solid fa-scissors"></i>
+
+                        <div>
+                            <h3>Expert Styling</h3>
+                            <p>Modern cuts with professional finishing.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="about-feature">
+                        <i class="fa-solid fa-user-tie"></i>
+
+                        <div>
+                            <h3>Premium Grooming</h3>
+                            <p>Complete grooming with attention to detail.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="about-feature">
+                        <i class="fa-solid fa-star"></i>
+
+                        <div>
+                            <h3>Quality Experience</h3>
+                            <p>Comfortable and professional service.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="about-feature">
+                        <i class="fa-solid fa-heart"></i>
+
+                        <div>
+                            <h3>Customer First</h3>
+                            <p>Your satisfaction is our priority.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <a href="about.html" class="about-btn">
+                    Discover More
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ===================== SERVICES ===================== -->
+
+    <section class="services" id="services">
+
+        <div class="section-title">
+            <span>WHAT WE OFFER</span>
+            <h2>Premium Grooming Services</h2>
+        </div>
+
+        <div class="services-marquee-wrapper">
+            <div class="services-marquee">
+
+                <!-- SET 1 -->
+                <div class="service-card">
+                    <img src="rocky.jpeg" alt="Hair Cut">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-scissors"></i></div>
+                        <h3>Hair Cut</h3>
+                        <p>Trendy haircuts customized to suit your style.</p>
+                        <div class="price">Starting From <span>₹249</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="beard.jpeg" alt="Beard Styling">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-user"></i></div>
+                        <h3>Beard Styling</h3>
+                        <p>Perfect beard shaping and styling.</p>
+                        <div class="price">Starting From <span>₹199</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="haircut.jpeg" alt="Hair Spa">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-spa"></i></div>
+                        <h3>Hair Spa</h3>
+                        <p>Nourishing spa for smooth healthy hair.</p>
+                        <div class="price">Starting From <span>₹299</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="color.jpeg" alt="Hair Color">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-droplet"></i></div>
+                        <h3>Hair Color</h3>
+                        <p>Premium quality coloring service.</p>
+                        <div class="price">Starting From <span>₹499</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="child.jpeg" alt="Kids Hair Cut">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-child"></i></div>
+                        <h3>Kids Hair Cut</h3>
+                        <p>Comfortable stylish haircut for kids.</p>
+                        <div class="price">Starting From <span>₹149</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="groom.jpeg" alt="Groom Special">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-crown"></i></div>
+                        <h3>Groom Special</h3>
+                        <p>Complete Grooming Package.</p>
+                        <div class="price">Starting From <span>₹999</span></div>
+                    </div>
+                </div>
+
+                <!-- SET 2 — duplicate for seamless infinite loop -->
+                <div class="service-card">
+                    <img src="rocky.jpeg" alt="Hair Cut">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-scissors"></i></div>
+                        <h3>Hair Cut</h3>
+                        <p>Trendy haircuts customized to suit your style.</p>
+                        <div class="price">Starting From <span>₹249</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="beard.jpeg" alt="Beard Styling">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-user"></i></div>
+                        <h3>Beard Styling</h3>
+                        <p>Perfect beard shaping and styling.</p>
+                        <div class="price">Starting From <span>₹199</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="w.jpeg" alt="Hair Spa">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-spa"></i></div>
+                        <h3>Hair Spa</h3>
+                        <p>Nourishing spa for smooth healthy hair.</p>
+                        <div class="price">Starting From <span>₹299</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="color.jpeg" alt="Hair Color">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-droplet"></i></div>
+                        <h3>Hair Color</h3>
+                        <p>Premium quality coloring service.</p>
+                        <div class="price">Starting From <span>₹499</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="child.jpeg" alt="Kids Hair Cut">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-child"></i></div>
+                        <h3>Kids Hair Cut</h3>
+                        <p>Comfortable stylish haircut for kids.</p>
+                        <div class="price">Starting From <span>₹149</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="groom.jpeg" alt="Groom Special">
+                    <div class="service-info">
+                        <div class="icon"><i class="fa-solid fa-crown"></i></div>
+                        <h3>Groom Special</h3>
+                        <p>Complete Grooming Package.</p>
+                        <div class="price">Starting From <span>₹999</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    <!-- =========================
+     GALLERY SECTION
+========================= -->
+
+    <section class="gallery-section" id="gallery">
+
+        <div class="gallery-title">
+
+            <p>OUR WORK</p>
+
+            <h2>
+                STYLE <span>GALLERY</span>
+            </h2>
+
+            <p class="gallery-subtitle">
+                Explore our latest haircuts, beard styles and grooming work.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <!-- IMAGE 1 -->
+            <div class="gallery-item">
+                <img src="assets/images/gallery1.jpg" alt="Premium Haircut">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-scissors"></i>
+                    <h3>Premium Haircut</h3>
+                    <p>Modern Style</p>
+                </div>
+            </div>
+
+
+            <!-- IMAGE 2 -->
+            <div class="gallery-item">
+                <img src="assets/images/gallery2.jpg" alt="Hair Styling">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Hair Styling</h3>
+                    <p>Professional Finish</p>
+                </div>
+            </div>
+
+
+            <!-- IMAGE 3 -->
+            <div class="gallery-item">
+                <img src="assets/images/gallery3.jpg" alt="Beard Styling">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-scissors"></i>
+                    <h3>Beard Styling</h3>
+                    <p>Sharp & Clean</p>
+                </div>
+            </div>
+
+
+            <!-- IMAGE 4 -->
+            <div class="gallery-item">
+                <img src="assets/images/gallery4.jpg" alt="Classic Haircut">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Classic Cut</h3>
+                    <p>Premium Grooming</p>
+                </div>
+            </div>
+
+
+            <!-- IMAGE 5 -->
+            <div class="gallery-item">
+                <img src="assets/images/gallery5.jpg" alt="Fade Haircut">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-scissors"></i>
+                    <h3>Fade Style</h3>
+                    <p>Clean & Modern</p>
+                </div>
+            </div>
+
+
+            <!-- IMAGE 6 -->
+            <div class="gallery-item">
+                <img src="assets/images/gallery6.jpg" alt="Grooming">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-crown"></i>
+                    <h3>Complete Grooming</h3>
+                    <p>Luxury Experience</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-button">
+
+            <a href="gallery.html">
+                View Full Gallery
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     CONTACT SECTION
+========================= -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="contact-title">
+
+            <p>GET IN TOUCH</p>
+
+            <h2>
+                BOOK YOUR <span>APPOINTMENT</span>
+            </h2>
+
+            <p class="contact-subtitle">
+                Ready for a fresh new look? Visit Sohil Hair Studio
+                or contact us to book your appointment.
+            </p>
+
+        </div>
+
+
+        <div class="contact-container">
+
+            <!-- LEFT INFO -->
+
+            <div class="contact-info">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <h3>Visit Us</h3>
+                        <p>
+                            Your Shop Address Here,<br>
+                            Your City, India
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div>
+                        <h3>Call Us</h3>
+                        <p>
+                            +91 XXXXX XXXXX
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>
+                            Chat with us directly
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <h3>Opening Hours</h3>
+                        <p>
+                            Mon – Sun<br>
+                            10:00 AM – 9:00 PM
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT FORM -->
+
+            <div class="contact-form">
+
+                <h3>Make An Appointment</h3>
+
+                <p>
+                    Fill in your details and we'll get back to you.
+                </p>
+
+
+                <!-- WHATSAPP APPOINTMENT FORM -->
+
+                <form id="appointmentForm">
+
+                    <div class="form-row">
+
+                        <input type="text" placeholder="Your Name" required>
+
+                        <input type="tel" placeholder="Phone Number" required>
+
+                    </div>
+
+
+                    <select required>
+
+                        <option value="">
+                            Select Service
+                        </option>
+
+                        <option value="Premium Haircut">
+                            Premium Haircut
+                        </option>
+
+                        <option value="Beard Styling">
+                            Beard Styling
+                        </option>
+
+                        <option value="Hair Spa">
+                            Hair Spa
+                        </option>
+
+                        <option value="Complete Grooming">
+                            Complete Grooming
+                        </option>
+
+                    </select>
+
+
+                    <input type="date" required>
+
+
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+
+
+                    <button type="submit">
+
+                        Book Appointment
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     WHATSAPP SCRIPT
+========================= -->
+
+    <script>
+
+        document.getElementById("appointmentForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+
+            // Get form values
+
+            const name =
+                this.querySelector('input[type="text"]').value;
+
+            const phone =
+                this.querySelector('input[type="tel"]').value;
+
+            const service =
+                this.querySelector('select').value;
+
+            const date =
+                this.querySelector('input[type="date"]').value;
+
+            const message =
+                this.querySelector('textarea').value;
+
+
+            // WhatsApp message
+
+            const whatsappMessage =
+                `🔔 *NEW APPOINTMENT BOOKING*
+
+👤 *Name:* ${name}
+
+📞 *Phone:* ${phone}
+
+💇 *Service:* ${service}
+
+📅 *Date:* ${date}
+
+💬 *Message:* ${message || "No message"}
+
+━━━━━━━━━━━━━━━━━━
+*Sohil Hair Studio*`;
+
+
+            // Your WhatsApp number
+            // 91 + 73908768170
+
+            const whatsappURL =
+                "https://wa.me/9173908768170?text=" +
+                encodeURIComponent(whatsappMessage);
+
+
+            // Open WhatsApp
+
+            window.open(whatsappURL, "_blank");
+
+        });
+
+    </script>
+    <script src="js/main.js"></script>
+    <div class="mouse-light"></div>
+</body>
+
+</html>
