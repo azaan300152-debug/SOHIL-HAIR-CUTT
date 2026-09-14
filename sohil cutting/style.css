@@ -989,3 +989,158 @@ transform:scale(1.03);
 }
 
 }
+
+
+/* ==========================================
+   HERO BUTTON VISIBILITY FIX
+   Keeps existing design while ensuring both buttons render
+   ========================================== */
+.hero-buttons {
+    position: relative;
+    z-index: 20;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.hero-buttons a {
+    position: relative;
+    z-index: 21;
+    visibility: visible !important;
+}
+
+
+/* ==========================================
+   GALLERY — NEON VIDEO + 3D PREMIUM CARDS
+   ========================================== */
+.gallery-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #050505;
+}
+
+.gallery-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+    opacity: .32;
+    filter: saturate(1.35) contrast(1.1) brightness(.7);
+}
+
+.gallery-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(255,0,0,.16), transparent 48%),
+        linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.84));
+    pointer-events: none;
+}
+
+.gallery-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at center, transparent 35%, rgba(0,0,0,.42) 100%);
+}
+
+.gallery-grid {
+    perspective: 1400px;
+    perspective-origin: center;
+}
+
+.gallery-item {
+    height: 410px;
+    transform-style: preserve-3d;
+    will-change: transform;
+    border: 1px solid rgba(255,35,35,.65);
+    box-shadow:
+        0 0 10px rgba(255,0,0,.32),
+        0 0 28px rgba(255,0,0,.18),
+        inset 0 0 18px rgba(255,0,0,.08);
+    transition:
+        transform .18s ease-out,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 18px;
+    padding: 2px;
+    background: linear-gradient(
+        120deg,
+        #ff1717,
+        rgba(255,80,80,.15),
+        #ff0000,
+        rgba(255,120,120,.18),
+        #ff1717
+    );
+    background-size: 300% 300%;
+    animation: galleryFireNeon 3s linear infinite;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes galleryFireNeon {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gallery-item img {
+    transform: translateZ(1px) scale(1.01);
+    transition: transform .7s cubic-bezier(.2,.8,.2,1), filter .5s ease;
+}
+
+.gallery-item:hover {
+    border-color: #ff2020;
+    box-shadow:
+        0 0 14px rgba(255,0,0,.8),
+        0 0 38px rgba(255,0,0,.48),
+        0 18px 55px rgba(0,0,0,.75),
+        inset 0 0 28px rgba(255,0,0,.12);
+}
+
+.gallery-item:hover img {
+    transform: translateZ(28px) scale(1.10);
+    filter: brightness(1.08) contrast(1.08) saturate(1.08);
+}
+
+.gallery-overlay {
+    transform: translateY(18px) translateZ(40px);
+    transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .45s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0) translateZ(55px);
+}
+
+.gallery-overlay i {
+    filter: drop-shadow(0 0 9px rgba(255,0,0,.8));
+}
+
+@media(max-width: 900px) {
+    .gallery-item {
+        height: 380px;
+    }
+}
+
+@media(max-width: 600px) {
+    .gallery-item {
+        height: 400px;
+    }
+}
