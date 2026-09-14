@@ -371,4 +371,32 @@ duration:1,
 ease:"power4.out"
 
 });
-
+
+
+/* =====================================
+   GALLERY 3D MOUSE TILT
+   ===================================== */
+document.querySelectorAll(".gallery-item").forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateY = ((x / rect.width) - 0.5) * 16;
+        const rotateX = ((y / rect.height) - 0.5) * -16;
+
+        // Stronger 3D lift when the mouse reaches the upper part of the card
+        const upperFlip = y < rect.height * 0.28 ? -5 : 0;
+
+        card.style.transform =
+            `perspective(1400px) rotateX(${rotateX + upperFlip}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.025)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform =
+            "perspective(1400px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)";
+    });
+
+});
